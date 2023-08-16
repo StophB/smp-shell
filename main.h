@@ -13,7 +13,7 @@
 #include <stdbool.h>
 
 /* free efficiency for assistant function */
-void freesupplies(char **buf);
+void free_supplies(char **buff);
 
 struct builtin
 {
@@ -33,17 +33,17 @@ struct flags
 } flags;
 
 /* my list strings */
-int stringcompares(char *str1, char *str2);
-int stringlength(char *str);
-int stringncmp(char *str1, char *str2, int n);
-char *stringdupicates(char *str);
-char *stringcharacter(char *str, char c);
+int string_compares(char *str1, char *str2);
+int string_length(char *str);
+int string_n_cmp(char *str1, char *str2, int n);
+char *string_dupicates(char *str);
+char *string_character(char *str, char c);
 
-void application(char *cmd, char **cp);
-char *findlocatepath(void);
+void app(char *cp, char **cmd);
+char *find_located_path(void);
 
 /* built-in plugins */ 
-int my_checker(char **cmd, char *buf);
+int my_checker(char **cmd, char *buff);
 void user_immediate(void);
 void signal_handler(int m);
 char **distinct_symbol(char *line);
