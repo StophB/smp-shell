@@ -5,10 +5,10 @@
  *All rights reserved or owned by StophB
  *
  *@cmd: command
- *@cp: chain from pointers to commands
+ *@cp: the chain from pointers to commands
  * Return: 0
  */
-void app(char *cmd, char **cp)
+void app(char *cp, char **cmd)
 {
 	pid_t child_pid;
 	int status;
@@ -19,10 +19,10 @@ void app(char *cmd, char **cp)
 		perror(cmd);
 	if (child_pid == 0)
 	{
-		execve(cmd, cp, envi);
-		perror(cmd);
-		free(cmd);
-		freesupplies(cp);
+		execve(cp, cmd, envi);
+		perror(cp);
+		free(cp);
+		free_supplies(cmd);
 		exit(98);
 	}
 	else
