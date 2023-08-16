@@ -39,7 +39,7 @@ int string_n_cmp(char *str1, char *str2, int n);
 char *string_dupicates(char *str);
 char *string_character(char *str, char c);
 
-void app(char *cmd, char **cp);
+void app(char *cp, char **cmd);
 char *find_located_path(void);
 
 /* built-in plugins */ 
