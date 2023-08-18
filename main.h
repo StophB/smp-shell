@@ -46,7 +46,7 @@ char *find_located_path(void);
 int my_checker(char **cmd, char *buff);
 void user_immediate(void);
 void signal_handler(int m);
-char **distinct_symbol(char *line);
+char **distinctSymbol(char *line);
 char *path_testing(char **path, char *cmd);
 char *path_end(char *path, char *cmd);
 int builtin_handler(char **cmd, char *line);
